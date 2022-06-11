@@ -1,0 +1,94 @@
+{
+    "hero": {
+        "type": "secondary",
+        "title": "You eat in the most modern canteen in Iasi",
+        "subtitle": "The canteen is also one of the largest in Iasi. Located right in the heart of the campus, students arrive within ten minutes of walking to the farthest dormitory.",
+        "paragraph": [
+            "Through this public catering service, students on campus, who often have modest financial means, can eat two meals a day at great prices. They can also stay in a pleasant setting, reserved exclusively for students, because before it opened, young people could only eat at private, fast-food suppliers near the campus.",
+            "The endowments of the canteen were obtained through the European funded project Rehabilitation and Modernization of the Tudor Vladimirescu Campus. In this academic year, the canteen awaits its students, every day, from Monday to Friday, between 12.00 and 19.00.."
+        ],
+        "image": "canteen/cantina-1-min.jpg",
+        "imageAlt": "Tudor Vladimirescu canteen is also one of the largest in Iasi"
+    },
+    "carouselSection": {
+        "carouselButtonLabel": "Discover our menu",
+        "carouselButtonLink": "/canteen",
+        "slides": [
+            {
+                "id": 1,
+                "image": "canteen/cantina-2-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 2,
+                "image": "canteen/cantina-3-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 3,
+                "image": "canteen/cantina-4-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 4,
+                "image": "canteen/cantina-5-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 5,
+                "image": "canteen/cantina-6-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 6,
+                "image": "canteen/cantina-7-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 7,
+                "image": "canteen/cantina-8-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 8,
+                "image": "canteen/cantina-9-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 9,
+                "image": "canteen/cantina-10-min.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            }
+        ]
+    },
+    "aboutSection": [
+        {
+            "id": 1,
+            "image": "canteen/canteen-hero.jpg",
+            "imageAlt": "Tudor Vladimirescu hero wallpaper",
+            "title": "You eat in the most modern canteen in Iasi",
+            "paragraph": [
+                "The canteen is also one of the largest in Iasi. Located right in the heart of the campus, students arrive within ten minutes of walking to the farthest dormitory. Over time, several systems have been implemented to support students: there are several points of collection, some exclusively for payment by card, and the daily menu is published online, with all prices updated, on campus.tuiasi.ro.",
+                "The canteen of the “Gheorghe Asachi” Technical University of Iași was inaugurated on May 9, 2011, following an extensive project that consisted of refurbishing and equipping it. 200 students can eat at the canteen at the same time and we estimate that on a working day from 12.00 to 19.00 about 1,000 people come."
+            ]
+        },
+        {
+            "id": 2,
+            "image": "canteen/cantina-1-min.jpg",
+            "imageAlt": "What is the Student Services Department",
+            "title": "The canteen is waiting for its students, every day, from Monday to Friday, between 12.00 and 19.00",
+            "paragraph": [
+                "Through this public catering service, students on campus, who often have modest financial means, can eat two meals a day at great prices. They can also stay in a pleasant setting, reserved exclusively for students, because before it opened, young people could only eat at private, fast-food suppliers near the campus.",
+                "The endowments of the canteen were obtained through the European funded project Rehabilitation and Modernization of the Tudor Vladimirescu Campus. In this academic year, the canteen awaits its students, every day, from Monday to Friday, between 12.00 and 19.00."
+            ]
+        }
+    ],
+    "showcaseWide": {
+        "title": "University Canteen",
+        "description": "Although it is not far from the first thing to think about when choosing the university where you will form your future, it is important to know that you have a place to eat a hot meal and that there are quality services. It's just that in TUIASI, these services excel, you can practically eat roasts almost as good as the ones at home at the best prices in the city."
+    },
+    "mapSection": {
+        "latitude": 47.155124044262536, 
+        "longitude": 27.609688568322156
+    }
+}

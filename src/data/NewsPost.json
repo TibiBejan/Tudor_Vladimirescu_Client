@@ -1,0 +1,64 @@
+{
+    "header": {
+        "navbar": {
+            "leftGroup": [
+                {
+                    "id": 0,
+                    "label": "01",
+                    "linkLabel": "About us",
+                    "linkPath": "/about-us"
+                },
+                {
+                    "id": 1,
+                    "label": "02",
+                    "linkLabel": "Canteen",
+                    "linkPath": "/canteen"
+                },
+                {
+                    "id": 2,
+                    "label": "03",
+                    "linkLabel": "Sportbase",
+                    "linkPath": "/sportbase"
+                },
+                {
+                    "id": 3,
+                    "label": "04",
+                    "linkLabel": "News",
+                    "linkPath": "/news"
+                }
+            ],
+            "rightGroup": [
+                {
+                    "id": 0,
+                    "label": "01",
+                    "linkLabel": "Halls",
+                    "linkPath": "/halls"
+                },
+                {
+                    "id": 1,
+                    "label": "02",
+                    "linkLabel": "Accommodation",
+                    "linkPath": "/accommodation"
+                },
+                {
+                    "id": 2,
+                    "label": "03",
+                    "linkLabel": "Account",
+                    "linkPath": "/account"
+                },
+                {
+                    "id": 3,
+                    "label": "04",
+                    "linkLabel": "Contact",
+                    "linkPath": "/contact-us"
+                }
+            ]
+        },
+        "hero": {
+            "type": "showcase",
+            "title": "Latest news from the hearth of our campus",
+            "image": "about-secondary.png",
+            "imageAlt": "Tudor Vladimirescu' is one of the largest student campuses in Romania"
+        }
+    }
+}

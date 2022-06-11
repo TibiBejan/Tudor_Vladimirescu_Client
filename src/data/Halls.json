@@ -1,0 +1,212 @@
+{
+    "hero": {
+        "type": "secondary",
+        "title": "Residence Halls",
+        "subtitle": "The campus has an area of ​​137,148 square meters, approximately 14 ha. The first dormitories built were T1-2 and T3-4, being given for accommodation in 1969, and the last were T18 and T19, completed in 1982.",
+        "paragraph": [
+            "Inside the campus there are 21 dormitories, a student canteen with the most affordable prices in the city, gyms and sports fields and a medical dispensary. The campus is powered by state-of-the-art thermal equipment, most of the dormitories are rehabilitated and have a total capacity of 8,000 seats. All rooms have free internet access and cable TV.",
+            "To ensure the safety of students, the campus is monitored by a high-performance video surveillance system, which consists of 105 rooms. If you are a student at TUIAȘI, you benefit from considerable discounts on public transport, so with 6 lei, you can travel for a month on all RATP lines."
+        ],
+        "image": "halls/residence-hall-t8.jpg",
+        "imageAlt": "Tudor Vladimirescu' is one of the largest student campuses in Romania"
+    },
+    "carouselSection": {
+        "subtitle": "Residence",
+        "subtitleLabel": "Tudor",
+        "title": "Our Residence Halls Tradition",
+        "carouselButtonLabel": "Discover accommodation process",
+        "carouselButtonLink": "/accommodation",
+        "slides": [
+            {
+                "id": 1,
+                "image": "halls/residence-hall-t1.jpg",
+                "imageAlt": "Residence Hall T1 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T1",
+                "linkPath": "/halls/t1",
+                "buttonLabel": "Discover T1"
+            },
+            {
+                "id": 2,
+                "image": "halls/residence-hall-t2.jpg",
+                "imageAlt": "Residence Hall T2 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T2",
+                "linkPath": "/halls/t2",
+                "buttonLabel": "Discover T2"
+            },
+            {
+                "id": 3,
+                "image": "halls/residence-hall-t3.jpg",
+                "imageAlt": "Residence Hall T3 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T3",
+                "linkPath": "/halls/t3",
+                "buttonLabel": "Discover T3"
+            },
+            {
+                "id": 4,
+                "image": "halls/residence-hall-t4.jpg",
+                "imageAlt": "Residence Hall T4 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T4",
+                "linkPath": "/halls/t4",
+                "buttonLabel": "Discover T4"
+            },
+            {
+                "id": 5,
+                "image": "halls/residence-hall-t5.jpg",
+                "imageAlt": "Residence Hall T5 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T5",
+                "linkPath": "/halls/t5",
+                "buttonLabel": "Discover T5"
+            },
+            {
+                "id": 6,
+                "image": "halls/residence-hall-t6.jpg",
+                "imageAlt": "Residence Hall T6 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T6",
+                "linkPath": "/halls/t6",
+                "buttonLabel": "Discover T6"
+            },
+            {
+                "id": 7,
+                "image": "halls/residence-hall-t7.jpg",
+                "imageAlt": "Residence Hall T7 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T7",
+                "linkPath": "/halls/t7",
+                "buttonLabel": "Discover T7"
+            },
+            {
+                "id": 8,
+                "image": "halls/residence-hall-t8.jpg",
+                "imageAlt": "Residence Hall T8 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T8",
+                "linkPath": "/halls/t8",
+                "buttonLabel": "Discover T8"
+            },
+            {
+                "id": 9,
+                "image": "halls/residence-hall-t9.jpg",
+                "imageAlt": "Residence Hall T9 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T9",
+                "linkPath": "/halls/t9",
+                "buttonLabel": "Discover T9"
+            },
+            {
+                "id": 10,
+                "image": "halls/residence-hall-t10.jpg",
+                "imageAlt": "Residence Hall T10 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T10",
+                "linkPath": "/halls/t10",
+                "buttonLabel": "Discover T10"
+            },
+            {
+                "id": 11,
+                "image": "halls/residence-hall-t11.jpg",
+                "imageAlt": "Residence Hall T11 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T11",
+                "linkPath": "/halls/t11",
+                "buttonLabel": "Discover T11"
+            },
+            {
+                "id": 12,
+                "image": "halls/residence-hall-t12.jpg",
+                "imageAlt": "Residence Hall T12 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T12",
+                "linkPath": "/halls/t12",
+                "buttonLabel": "Discover T12"
+            },
+            {
+                "id": 13,
+                "image": "halls/residence-hall-t13.jpg",
+                "imageAlt": "Residence Hall T13 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T13",
+                "linkPath": "/halls/t13",
+                "buttonLabel": "Discover T13"
+            },
+            {
+                "id": 14,
+                "image": "halls/residence-hall-t14.jpg",
+                "imageAlt": "Residence Hall T14 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T143",
+                "linkPath": "/halls/t14",
+                "buttonLabel": "Discover T143"
+            },
+            {
+                "id": 15,
+                "image": "halls/residence-hall-t15.jpg",
+                "imageAlt": "Residence Hall T15 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T15",
+                "linkPath": "/halls/t15",
+                "buttonLabel": "Discover T15"
+            },
+            {
+                "id": 16,
+                "image": "halls/residence-hall-t16.jpg",
+                "imageAlt": "Residence Hall T16 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T16",
+                "linkPath": "/halls/t16",
+                "buttonLabel": "Discover T16"
+            },
+            {
+                "id": 17,
+                "image": "halls/residence-hall-t17.jpg",
+                "imageAlt": "Residence Hall T17 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T17",
+                "linkPath": "/halls/t17",
+                "buttonLabel": "Discover T17"
+            },
+            {
+                "id": 18,
+                "image": "halls/residence-hall-t18.jpg",
+                "imageAlt": "Residence Hall T18 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T18",
+                "linkPath": "/halls/t18",
+                "buttonLabel": "Discover T18"
+            },
+            {
+                "id": 19,
+                "image": "halls/residence-hall-t19.jpg",
+                "imageAlt": "Residence Hall T19 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T19",
+                "linkPath": "/halls/t19",
+                "buttonLabel": "Discover T19"
+            },
+            {
+                "id": 20,
+                "image": "halls/residence-hall-t20.jpg",
+                "imageAlt": "Residence Hall T20 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T20",
+                "linkPath": "/halls/t20",
+                "buttonLabel": "Discover T20"
+            },
+            {
+                "id": 21,
+                "image": "halls/residence-hall-t21.jpg",
+                "imageAlt": "Residence Hall T21 Front View",
+                "subtitle": "Tudor Vladimirescu",
+                "title": "Residence Hall T21",
+                "linkPath": "/halls/t21",
+                "buttonLabel": "Discover T21"
+            }
+        ]
+    },
+    "time": ""
+}

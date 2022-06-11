@@ -1,0 +1,99 @@
+{
+    "hero": {
+        "type": "secondary",
+        "title": "The university encourages a healthy life through sports",
+        "subtitle": "Gheorghe Asachi Technical University of Iași encourages a healthy life through sports, which is why it provides its students with a gym equipped with all utilities. The sports base on the Tudor Vladimirescu student campus consists of 6 outdoor sports fields and 2 gyms.",
+        "paragraph": [
+            "The main sports field has an area of ​​1515sqm and consists of 2 bodies. Body A includes locker rooms, bathrooms, offices, annexes and technical spaces. Body B includes a playground with a synthetic surface, mounted on a metal structure. Also, this field is equipped with nightclub, four mobile basketball panels, two gates for mini-football or handball and 80-seat stands.",
+            "The sports field number 4 and is equipped with night installation and synthetic carpet surface. This field is intended exclusively for mini-football. The sports field with number 5 is equipped with night installation, basketball hoops and tennis poles, respectively football. Finally, the sports field with number 6 is equipped with night installation and two badminton courts."
+        ],
+        "image": "sportbase/sportbase-4.jpg",
+        "imageAlt": "The Sports Center is the ideal place where you can spend your free time"
+    },
+    "carouselSection": {
+        "carouselButtonLabel": "Contact us",
+        "carouselButtonLink": "/contact-us",
+        "slides": [
+            {
+                "id": 1,
+                "image": "sportbase/sportbase-5.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 2,
+                "image": "sportbase/sportbase-6.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 3,
+                "image": "sportbase/sportbase-7.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 4,
+                "image": "sportbase/sportbase-8.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 5,
+                "image": "sportbase/sportbase-9.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 6,
+                "image": "sportbase/sportbase-10.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 7,
+                "image": "sportbase/sportbase-11.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 8,
+                "image": "sportbase/sportbase-12.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 9,
+                "image": "sportbase/sportbase-13.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 9,
+                "image": "sportbase/sportbase-banner.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            }
+        ]
+    },
+    "aboutSection": [
+        {
+            "id": 1,
+            "image": "sportbase/sportbase-1.jpg",
+            "imageAlt": "Tudor Vladimirescu hero wallpaper",
+            "title": "The Sports Center is the ideal place where you can spend your free time",
+            "paragraph": [
+                "The main gym has a usable area of ​​1000sqm, the total interior area is 1253.75sqm and consists of ground floor and first floor. The ground floor includes a room for sports games, with an area of ​​542sqm where you can play mini-football, volleyball, handball, basketball and tennis, 193sqm gym, equipped with 2 gym benches, 6 wooden trellis, 11 machines work, 24 crystal mirrors and stainless steel ballet bar. Also on the ground floor are the administrative and teaching offices, locker rooms, toilets and a storage room for sporting goods.",
+                "The floor of this gym includes a 34sqm gym, equipped with 12 gym equipment, dumbbell rack, 4 Olympic bars, dumbbell rack, 4 disc pyramid rack, 13 crystal mirrors and stainless steel ballet bar and 2 trellis made of wood. Also upstairs are the locker rooms for teachers and 2 more locker rooms for students."
+            ]
+        },
+        {
+            "id": 2,
+            "image": "sportbase/sportbase-9.jpg",
+            "imageAlt": "What is the Student Services Department",
+            "title": "Modern sports fields and gyms",
+            "paragraph": [
+                "The secondary sports hall includes on the ground floor a 200sqm games room, a table tennis room with an area of ​​64sqm, a SPA group, two offices for teachers and toilets. Upstairs, there is a gym with an area of ​​64sqm, a table tennis room, two offices for teachers and storage spaces for sports equipment.",
+                "For Fridays, Saturdays and Sundays, students will be able to make appointments at 0759.507.620 or 0232 702 425. All students must have their student ID / student card / access card or any document certifying the quality of student of the university at the entrance to the sports base. All students have the obligation to comply with the rules for using the sports base contained in ROF COD.REG.33 approved by Senate Decision no. 129 / 17.05.2019."
+            ]
+        }
+    ],
+    "showcaseWide": {
+        "title": "University Sportbase",
+        "description": "For Fridays, Saturdays and Sundays, students will be able to make appointments at 0759.507.620 or 0232 702 425. All students must have their student ID / student card / access card or any document certifying the quality of student of the university at the entrance to the sports base. All students have the obligation to comply with the rules for using the sports base contained in ROF COD.REG.33 approved by Senate Decision no. 129 / 17.05.2019."
+    },
+    "mapSection": {
+        "latitude": 47.155309684694856, 
+        "longitude": 27.61132489694953
+    }
+}

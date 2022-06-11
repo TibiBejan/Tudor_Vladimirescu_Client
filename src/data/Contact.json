@@ -1,0 +1,62 @@
+{
+    "hero": {
+        "type": "showcase",
+        "title": "We are at your disposal throughout the university year. Contact us",
+        "image": "dss/dss-team-1.jpg",
+        "imageAlt": "Tudor Vladimirescu' is one of the largest student campuses in Romania"
+    },
+    "carouselSection": {
+        "carouselButtonLabel": "Discover DSS",
+        "carouselButtonLink": "/dss",
+        "slides": [
+            {
+                "id": 1,
+                "image": "staff/Bogdan-BUDEANU.png",
+                "imageAlt": "Residence Hall T1 Front View",
+                "name": "Bogdan BUDEANU",
+                "email": "bogdan.budeanu@staff.tuiasi.ro"
+            },
+            {
+                "id": 2,
+                "image": "staff/Camelia-NIȚULESCU.png",
+                "imageAlt": "Residence Hall T1 Front View",
+                "name": "Camelia NIȚULESCU",
+                "email": "camelia.nitulescu@staff.tuiasi.ro"
+            },
+            {
+                "id": 3,
+                "image": "staff/Marius-IMBREA.png",
+                "imageAlt": "Residence Hall T1 Front View",
+                "name": "Marius IMBREA",
+                "email": "stelian-marius.imbrea@staff.tuiasi.ro"
+            },
+            {
+                "id": 4,
+                "image": "staff/Andrei-SĂNDUCU.png",
+                "imageAlt": "Residence Hall T1 Front View",
+                "name": "Andrei SĂNDUCU",
+                "email": "andrei-danut.sanducu@staff.tuiasi.ro"
+            }
+        ]
+    },
+    "descriptiveSection" : [
+        {
+            "id": 1,
+            "title": "The working hours are from Monday to Friday, between 07.30-15.30.",
+            "description": [
+                "The Student Services Department is an organizational structure of the “Gheorghe Asachi” Technical University of Iași, subordinated to the General Administrative Directorate and the Student Relations Vice-Rectorate, which coordinates the administrative activities of the “Tudor Vladimirescu” Campus.",
+                "The Student Services Department is coordinated by a director and, depending on the activities carried out, is subordinated to the following organizational structures: Social Service, Technical Office, Financial Office - Accounting."
+            ]
+        }
+    ],
+    "showcaseSectionPrimary": {
+        "subtitle": "Student Services Department",
+        "subtitleLabel": "For one another",
+        "title": "We are at your disposal throughout the university year",
+        "description": "The headquarters of the Student Services Department is located on the ground floor of the T18 and T19 dormitories. We are waiting for you to send us any advice, suggestions or notifications related to the Tudor Vladimirescu student campus. The working hours are from Monday to Friday, between 07.30-15.30.",
+        "linkLabel": "Discover",
+        "linkPath": "/dss",
+        "image": "dss/dss-team-2.jpg",
+        "imageAlt": "Tudor Vladimirescu Student Services Department"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "hero": {
+        "type": "secondary",
+        "title": "Student Services Department",
+        "subtitle": "If you arrive here, it means that you are one of the 8,000 students of the Gheorghe Asachi Technical University of Iași (TUIAȘI) who benefit from an accommodation in the 21 dormitories of the Tudor Vladimirescu Campus, which is managed and administered by the Student Services Directorate (DSS).",
+        "paragraph": [
+            "Basically, this is our mission, the DSS. As an organizational structure of the university, it is subordinated to the General Administrative Directorate and the Vice-Rectorate responsible for the relationship with students, you will meet with the 211 employees every time you need to solve a problem on campus. We work for you divided into three departments - social, financial-accounting and technical.",
+            "In general terms, we aim to meet all the needs of the student community on campus. To make it efficient, effective and to create a close relationship between the administrative part of a university, which may seem difficult, bureaucratic and difficult to understand for a student, and the community of young people who have taken the first step towards their professional future at our university."
+        ],
+        "image": "campus/campus-about-8.jpg",
+        "imageAlt": "Tudor Vladimirescu' is one of the largest student campuses in Romania"
+    },
+    "aboutSection": [
+        {
+            "id": 1,
+            "image": "campus/campus-about-1.jpg",
+            "imageAlt": "Tudor Vladimirescu hero wallpaper",
+            "title": "We stay close to the university students",
+            "subtitle": "Our mission",
+            "subtitleLabel": "Tudor",
+            "paragraph": "Although we haven't been there yet, we're aiming high. We want the largest campus in Iasi to become one of the most professionally managed in the country, to be recognized as a landmark among student campuses in Eastern Europe. Working closely with students, in order to be constantly connected to their needs, we want to offer them impeccable accommodation conditions, quality services from the administrative staff and to provide them with all the necessary facilities. The only way we can do this is to stay close to the university students; they will always have a say in the way the campus looks and the way it is developing.",
+            "linkPath": "/about-us",
+            "linkLabel": "Discover Tudor"
+        },
+        {
+            "id": 2,
+            "image": "campus/campus-about-2.png",
+            "imageAlt": "What is the Student Services Department",
+            "title": "We support the needs of students",
+            "subtitleLabel": "Tudor",
+            "subtitle": "Commitment",
+            "paragraph": "We want our students to enjoy learning in a fun way and to feel good on campus, and we don't constantly strive for that, working all the months of the year without interruption. From the beginning of the academic year, when we are preparing, but which continues for all the nine months of courses. We also manage the issuance of RATP subscriptions, which benefit over 3000 students every month. We also prepare the meetings of the Social Commission, in order to be always close to the students' needs. We ensure the operation and maintenance of the entire energy and running water network in all 21 dormitories, which requires us, given that the campus is the size of a city where most students from all over the capital of Moldova are accommodated.",
+            "linkPath": "/about-us",
+            "linkLabel": "Discover Tudor"
+        }
+    ],
+    "contactSection": {
+        "title": "Contact us for more information",
+        "phone": "0232.271.288",
+        "email": "dss@tuiasi.ro"
+    }
+}

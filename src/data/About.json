@@ -1,0 +1,104 @@
+{
+    "hero": {
+        "type": "secondary",
+        "title": "This island in the middle of Iasi has its own ecosystem",
+        "subtitle": "Tudor Vladimirescu is one of the largest student campuses in Romania, is full of hustle and bustle and has a special spirit, being recognized even by students of other universities in the capital of Moldova.",
+        "paragraph": [
+            "Inside the campus there are 21 dormitories, a student canteen with the most affordable prices in the city, gyms and sports fields and a medical dispensary. The campus is powered by state-of-the-art thermal equipment, most of the dormitories are rehabilitated and have a total capacity of 8,000 seats. All rooms have free internet access and cable TV.",
+            "To ensure the safety of students, the campus is monitored by a high-performance video surveillance system, which consists of 105 rooms. If you are a student at TUIAȘI, you benefit from considerable discounts on public transport, so with 6 lei, you can travel for a month on all RATP lines."
+        ],
+        "image": "campus/campus-about-2.png",
+        "imageAlt": "Tudor Vladimirescu' is one of the largest student campuses in Romania"
+    },
+    "carouselSection": {
+        "carouselButtonLabel": "Discover Accommodation Process",
+        "carouselButtonLink": "/accommodation",
+        "slides": [
+            {
+                "id": 1,
+                "image": "campus/campus-about-11.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 2,
+                "image": "campus/campus-about-4.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 3,
+                "image": "campus/campus-about-5.png",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 4,
+                "image": "campus/campus-about-6.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 5,
+                "image": "campus/campus-about-7.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 6,
+                "image": "campus/campus-about-8.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 7,
+                "image": "campus/campus-about-9.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 8,
+                "image": "campus/campus-about-10.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            },
+            {
+                "id": 9,
+                "image": "campus/campus-about-3.jpg",
+                "imageAlt": "Residence Hall T1 Front View"
+            }
+        ]
+    },
+    "descriptiveSection" : [
+        {
+            "id": 1,
+            "title": "Tudor Vladimirescu' is one of the largest student campuses in Romania.",
+            "description": [
+                "This island in the middle of Iași has its own ecosystem - students have a football championship at home, with stages every week and trophies at the end, they have a bigger sports base than the small towns mentioned above, they manage every year and helps to clear the snow from the indoor parking lot and clean the green spaces.",
+                "The sports teams of the university have the best gallery in Iași and bring dozens of trophies every year, and the stories about the adventures and legends of Tudor last even before 1989 in the student leagues, which carry on a tradition of camaraderie almost unique in the country.",
+                "Moreover, you should know that in Tudor there are about the lowest accommodation rates in the country. 1080 students live in the T17 dormitory, the second largest in the country. There are eight professional laundries on campus, which serve ten dormitories on campus free of charge."
+            ]
+        },
+        {
+            "id": 2,
+            "title": "This island in the middle of Iasi has its own ecosystem.",
+            "description": [
+                "The Technical University of Iași has its own football team that in 2014 was national champion and represented TUIAȘI and Romania at the international phase in Rotterdam, where the European University Games - EUGames 2014 took place, where 2,830 athletes from 280 centers participated representing 174 universities in 34 European countries.",
+                "The players have their own equipment, in white and blue colors, reminiscent of the tradition of the Iași Polytechnic. Starting with 2013, TUIAȘI participated in several sports competitions organized by the Romanian Mini-Football Federation or held under the auspices of the Romanian Football Federation, obtaining remarkable results.",
+                "Since 2015, the university has formed its own team, both girls and boys, for basketball, streetball, volleyball and badminton, participating in the national university championships, organized by the Ministry of National Education and Scientific Research, through the Federation of School and University Sports."
+            ]
+        }
+    ],
+    "showcaseSectionPrimary": {
+        "subtitle": "Canteen",
+        "subtitleLabel": "Facility",
+        "title": "You eat in the most modern canteen in Iasi",
+        "description": "The canteen of the “Gheorghe Asachi” Technical University of Iași was inaugurated on May 9, 2011, following an extensive project that consisted of refurbishing and equipping it. At the same time, 200 students can dine in the canteen and we estimate that on a working day from 12.00 to 19.00, approximately 1,000 people come.",
+        "linkLabel": "Discover",
+        "linkPath": "/canteen",
+        "image": "canteen/cantina-1-min.jpg",
+        "imageAlt": "Tudor Vladimirescu Canteen view"
+    },
+    "showcaseSectionSecondary": {
+        "subtitle": "Sportbase",
+        "subtitleLabel": "Facility",
+        "title": "The university encourages a healthy life through sports",
+        "description": "'Gheorghe Asachi' Technical University of Iași encourages a healthy life through sports, which is why it provides its students with a gym equipped with all utilities. The sports base on the 'Tudor Vladimirescu' student campus consists of 6 outdoor sports fields and 2 gyms.",
+        "linkLabel": "Discover",
+        "linkPath": "/sportbase",
+        "image": "sportbase/sportbase-3.jpg",
+        "imageAlt": "Tudor Vladimirescu Sportbase view"
+    }
+}

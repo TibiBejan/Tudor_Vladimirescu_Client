@@ -1,0 +1,85 @@
+{
+    "hero": {
+        "type": "secondary",
+        "title": "Latest news from the hearth of our campus",
+        "subtitle": "Tudor Vladimirescu is one of the largest student campuses in Romania, is full of hustle and bustle and has a special spirit, being recognized even by students of other universities in the capital of Moldova.",
+        "paragraph": [
+            "Inside the campus there are 21 dormitories, a student canteen with the most affordable prices in the city, gyms and sports fields and a medical dispensary. The campus is powered by state-of-the-art thermal equipment, most of the dormitories are rehabilitated and have a total capacity of 8,000 seats. All rooms have free internet access and cable TV.",
+            "To ensure the safety of students, the campus is monitored by a high-performance video surveillance system, which consists of 105 rooms. If you are a student at TUIAȘI, you benefit from considerable discounts on public transport, so with 6 lei, you can travel for a month on all RATP lines."
+        ],
+        "image": "campus/campus-about-2.png",
+        "imageAlt": "Tudor Vladimirescu' is one of the largest student campuses in Romania"
+    },
+    "posts": [
+        {
+            "id": 1,
+            "hero": {
+                "type": "showcase"
+            },
+            "cardPreview": {
+                "timestamp": "26 May 2022",
+                "title": "Revitalization of the green area between homes T3 and T4",
+                "descriptionPreview": "We want the whole campus to be a green place in the coming years, with spaces where you can spend your summer time, where you can walk without taking care of cars.",
+                "pathParam": "",
+                "image": "campus/campus-showcase-3.jpg",
+                "imageAlt": "Revitalization of the green area between homes T3 and T4"
+            }
+        },
+        {
+            "id": 2,
+            "hero": {
+                "type": "showcase"
+            },
+            "cardPreview": {
+                "timestamp": "26 May 2022",
+                "title": "Revitalization of the green area between homes T3 and T4",
+                "descriptionPreview": "We want the whole campus to be a green place in the coming years, with spaces where you can spend your summer time, where you can walk without taking care of cars.",
+                "pathParam": "",
+                "image": "campus/campus-showcase-4.jpg",
+                "imageAlt": "Revitalization of the green area between homes T3 and T4"
+            }
+        },
+        {
+            "id": 3,
+            "hero": {
+                "type": "showcase"
+            },
+            "cardPreview": {
+                "timestamp": "26 May 2022",
+                "title": "Revitalization of the green area between homes T3 and T4",
+                "descriptionPreview": "We want the whole campus to be a green place in the coming years, with spaces where you can spend your summer time, where you can walk without taking care of cars.",
+                "pathParam": "",
+                "image": "campus/campus-showcase-1.jpg",
+                "imageAlt": "Revitalization of the green area between homes T3 and T4"
+            }
+        },
+        {
+            "id": 4,
+            "hero": {
+                "type": "showcase"
+            },
+            "cardPreview": {
+                "timestamp": "26 May 2022",
+                "title": "Revitalization of the green area between homes T3 and T4",
+                "descriptionPreview": "We want the whole campus to be a green place in the coming years, with spaces where you can spend your summer time, where you can walk without taking care of cars.",
+                "pathParam": "",
+                "image": "campus/campus-showcase-2.jpg",
+                "imageAlt": "Revitalization of the green area between homes T3 and T4"
+            }
+        },
+        {
+            "id": 5,
+            "hero": {
+                "type": "showcase"
+            },
+            "cardPreview": {
+                "timestamp": "26 May 2022",
+                "title": "Revitalization of the green area between homes T3 and T4",
+                "descriptionPreview": "We want the whole campus to be a green place in the coming years, with spaces where you can spend your summer time, where you can walk without taking care of cars.",
+                "pathParam": "",
+                "image": "campus/campus-showcase-4.jpg",
+                "imageAlt": "Revitalization of the green area between homes T3 and T4"
+            }
+        }
+    ]
+}
