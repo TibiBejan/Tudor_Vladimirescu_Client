@@ -27,14 +27,12 @@ import ResetPassword from './pages/ResetPassword';
 import Unauthorized from './pages/Unauthorized';
 import Page404 from './pages/404';
 // Redux
-import { useDispatch, useSelector } from 'react-redux';
-import { requestCheckLogin, receiveCheckLogin, receiveCheckLoginError, userSelector } from './features/user/userSlice';
+import { useDispatch } from 'react-redux';
+import { requestCheckLogin, receiveCheckLogin, receiveCheckLoginError } from './features/user/userSlice';
 
 function App() {
   // Redux
   const dispatch = useDispatch();
-  // const userState = useSelector(userSelector);
-  // const authSession = userState?.user;
 
   // Effect
   useEffect(() => {
