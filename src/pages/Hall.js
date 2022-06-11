@@ -28,7 +28,7 @@ function Hall() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.request({method: 'GET', url: `/api/hall/${hallId}`});
+        const response = await axios.request({method: 'GET', url: `/proxy/hall/${hallId}`});
         setData(response.data.data);
       } catch (error) {
         setError(error.message);
