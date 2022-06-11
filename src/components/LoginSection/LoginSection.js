@@ -30,7 +30,7 @@ function LoginSection() {
             // INIT REQ
             dispatch(requestLogin());
 
-            const response = await axios.request({method: 'POST', url: "https://campus-tudor-2022.herokuapp.com/api/v1/auth/login", data: user});
+            const response = await axios.request({method: 'POST', url: "https://campus-tudor-vladimirescu-2022.herokuapp.com/api/v1/auth/login", data: user});
             const { data } = response.data;
             if(response.status === 200 || response.status === 201) {
                 dispatch(receiveLogin(data));

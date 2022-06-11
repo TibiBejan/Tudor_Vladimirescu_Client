@@ -28,7 +28,7 @@ function Hall() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.request({method: 'GET', url: `https://campus-tudor-2022.herokuapp.com/api/v1/hall/${hallId}`});
+        const response = await axios.request({method: 'GET', url: `https://campus-tudor-vladimirescu-2022.herokuapp.com/api/v1/hall/${hallId}`});
         setData(response.data.data);
       } catch (error) {
         setError(error.message);

@@ -41,7 +41,7 @@ function App() {
         // INIT REQ
         dispatch(requestCheckLogin);
 
-        const response = await axios.request({method: 'GET', url: "https://campus-tudor-2022.herokuapp.com/api/v1/auth/login"});
+        const response = await axios.request({method: 'GET', url: "https://campus-tudor-vladimirescu-2022.herokuapp.com/api/v1/auth/login"});
         if(response.status === 200 || response.status === 201) {
           dispatch(receiveCheckLogin(response.data.data));
         } else {
