@@ -41,7 +41,7 @@ function App() {
         // INIT REQ
         dispatch(requestCheckLogin);
 
-        const response = await axios.request({method: 'GET', url: `${process.env.REACT_APP_API_URL}/auth/login`});
+        const response = await axios.request({method: 'GET', withCredentials: true, url: `${process.env.REACT_APP_API_URL}/auth/login`});
         if(response.status === 200 || response.status === 201) {
           dispatch(receiveCheckLogin(response.data.data));
         } else {

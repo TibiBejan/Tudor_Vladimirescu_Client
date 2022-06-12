@@ -30,7 +30,7 @@ function LoginSection() {
             // INIT REQ
             dispatch(requestLogin());
 
-            const response = await axios.request({method: 'POST', url: `${process.env.REACT_APP_API_URL}/auth/login`, data: user});
+            const response = await axios.request({method: 'POST', withCredentials: true, url: `${process.env.REACT_APP_API_URL}/auth/login`, data: user});
             const { data } = response.data;
             if(response.status === 200 || response.status === 201) {
                 dispatch(receiveLogin(data));
