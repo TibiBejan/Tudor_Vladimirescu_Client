@@ -30,9 +30,7 @@ function LoginSection() {
             // INIT REQ
             dispatch(requestLogin());
 
-            console.log(process.env.REACT_APP_API_URL)
-
-            const response = await axios.request({method: 'POST', url: "http://127.0.0.1:8001/api/v1/auth/login", data: user});
+            const response = await axios.request({method: 'POST', url: `${process.env.REACT_APP_API_URL}/auth/login`, data: user});
             const { data } = response.data;
             if(response.status === 200 || response.status === 201) {
                 dispatch(receiveLogin(data));
