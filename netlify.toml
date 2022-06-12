@@ -3,6 +3,13 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/api"
+  to = "https://campus-tudor-vladimirescu-2022.herokuapp.com/api/v1"
+  status = 200
+  force = true
+  signed = "JWT_SECRET"
+
 [context.production.environment]
   REACT_APP_API_URL = "https://campus-tudor-vladimirescu-2022.herokuapp.com/api/v1"
 
