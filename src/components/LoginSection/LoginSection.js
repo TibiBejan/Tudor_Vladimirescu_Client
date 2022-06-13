@@ -25,12 +25,21 @@ function LoginSection() {
             email: values.email,
             password: values.password
         }
-
         try {
             // INIT REQ
             dispatch(requestLogin());
 
-            const response = await axios.request({method: 'POST', url: `/api/auth/login`, data: user});
+            const response = await axios.request({
+                method: 'POST', 
+                url: `${process.env.REACT_APP_API_URL}/auth/login/`, 
+                data: user,
+                headers: {
+                    withCredentials: true,
+                    'Access-Control-Allow-Origin': '*',
+                    "Access-Control-Allow-Credentials": 'true',
+                    'Content-Type': 'application/json'
+                }
+            });
             const { data } = response.data;
             if(response.status === 200 || response.status === 201) {
                 dispatch(receiveLogin(data));

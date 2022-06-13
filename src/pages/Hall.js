@@ -28,7 +28,16 @@ function Hall() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.request({method: 'GET', url: `/api/hall/${hallId}`});
+        const response = await axios.request({
+          method: 'GET', 
+          url: `${process.env.REACT_APP_API_URL}/hall/${hallId}/`,
+          headers: {
+            withCredentials: true,
+            'Access-Control-Allow-Origin': '*',
+            "Access-Control-Allow-Credentials": 'true',
+            'Content-Type': 'application/json'
+          }     
+        });
         setData(response.data.data);
       } catch (error) {
         setError(error.message);
