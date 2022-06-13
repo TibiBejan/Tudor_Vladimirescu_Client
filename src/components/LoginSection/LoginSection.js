@@ -33,12 +33,13 @@ function LoginSection() {
                 method: 'POST', 
                 url: `${process.env.REACT_APP_API_URL}/auth/login`, 
                 data: user,
-                headers: {
-                    withCredentials: true,
-                    'Access-Control-Allow-Origin': '*',
-                    "Access-Control-Allow-Credentials": 'true',
-                    'Content-Type': 'application/json'
-                }
+                withCredentials: true,
+                // headers: {
+                //     withCredentials: true,
+                //     'Access-Control-Allow-Origin': '*',
+                //     "Access-Control-Allow-Credentials": 'true',
+                //     'Content-Type': 'application/json'
+                // }
             });
             const { data } = response.data;
             if(response.status === 200 || response.status === 201) {
