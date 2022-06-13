@@ -16,7 +16,7 @@ const PrivateRoute = ({ auth, allowedRoles }) => {
             {
                 !auth.loading && userSession?.token && allowedRoles.includes(userSession?.user?.role)
                     ? <Outlet />
-                    : userSession.token
+                    : userSession?.token && !allowedRoles.includes(userSession?.user?.role)
                         ? <Navigate to="/unauthorized" state={{ from: location }} replace />
                         : <Navigate to="/login" state={{ from: location }} replace />
             }
