@@ -43,7 +43,7 @@ function App() {
 
         const response = await axios.request({
           method: 'GET', 
-          url: `${process.env.REACT_APP_API_URL}/auth/login/`,
+          url: `${process.env.REACT_APP_API_URL}/auth/login`,
           headers: {
             withCredentials: true,
             'Access-Control-Allow-Origin': '*',

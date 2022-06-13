@@ -31,7 +31,7 @@ function LoginSection() {
 
             const response = await axios.request({
                 method: 'POST', 
-                url: `${process.env.REACT_APP_API_URL}/auth/login/`, 
+                url: `${process.env.REACT_APP_API_URL}/auth/login`, 
                 data: user,
                 headers: {
                     withCredentials: true,

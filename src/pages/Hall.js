@@ -30,7 +30,7 @@ function Hall() {
       try {
         const response = await axios.request({
           method: 'GET', 
-          url: `${process.env.REACT_APP_API_URL}/hall/${hallId}/`,
+          url: `${process.env.REACT_APP_API_URL}/hall/${hallId}`,
           headers: {
             withCredentials: true,
             'Access-Control-Allow-Origin': '*',
