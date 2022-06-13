@@ -27,12 +27,13 @@ import ResetPassword from './pages/ResetPassword';
 import Unauthorized from './pages/Unauthorized';
 import Page404 from './pages/404';
 // Redux
-import { useDispatch } from 'react-redux';
-import { requestCheckLogin, receiveCheckLogin, receiveCheckLoginError } from './features/user/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { requestCheckLogin, receiveCheckLogin, receiveCheckLoginError, userSelector } from './features/user/userSlice';
 
 function App() {
   // Redux
   const dispatch = useDispatch();
+  const userState = useSelector(userSelector);
 
   // Effect
   useEffect(() => {
@@ -45,12 +46,6 @@ function App() {
           method: 'GET', 
           url: `${process.env.REACT_APP_API_URL}/auth/login`,
           withCredentials: true,
-          // headers: {
-          //   withCredentials: true,
-          //   'Access-Control-Allow-Origin': '*',
-          //   "Access-Control-Allow-Credentials": 'true',
-          //   'Content-Type': 'application/json'
-          // }
         });
         if(response.status === 200 || response.status === 201) {
           dispatch(receiveCheckLogin(response.data.data));
@@ -67,34 +62,34 @@ function App() {
     <div className="App">
       <Router>
           <ScrollToTop>
-            <Routes>
-              {/* <Route element={<PrivateRoutes auth={authSession} allowedRoles={['admin']} />}>
-                <Route path="admin" element={<AdminDashboard />} />
-              </Route>
+          <Routes>
+            <Route element={<PrivateRoutes auth={userState} allowedRoles={['admin']} />}>
+              <Route path="admin" element={<AdminDashboard />} />
+            </Route>
 
-              <Route element={<PrivateRoutes auth={authSession} allowedRoles={['student']} />}>
-                <Route path="student" element={<StudentDashboard />} />
-              </Route> */}
+            <Route element={<PrivateRoutes auth={userState} allowedRoles={['student']} />}>
+              <Route path="student" element={<StudentDashboard />} />
+            </Route>
 
-              <Route index path="/" element={<Index />} />
-              <Route path="about-us" element={<About />} />
-              <Route path="canteen" element={<Cafetaria />} />
-              <Route path="contact-us" element={<Contact />} />
-              <Route path="halls" element={<Halls />}/>
-              <Route path="halls/:hallId" element={<Hall />} />
-              <Route path="sportbase" element={<Sportbase />} />
-              <Route path="accommodation" element={<Accommodation />} />
-              <Route path="news" element={<News />} />
-              <Route path="dss" element={<StudentServices />} />
+            <Route index path="/" element={<Index />} />
+            <Route path="about-us" element={<About />} />
+            <Route path="canteen" element={<Cafetaria />} />
+            <Route path="contact-us" element={<Contact />} />
+            <Route path="halls" element={<Halls />}/>
+            <Route path="halls/:hallId" element={<Hall />} />
+            <Route path="sportbase" element={<Sportbase />} />
+            <Route path="accommodation" element={<Accommodation />} />
+            <Route path="news" element={<News />} />
+            <Route path="dss" element={<StudentServices />} />
 
-              <Route path="login" element={<Login />} />
-              <Route path="register" element={<Register />} />
-              <Route path="forgot-password" element={<ForgotPassword />} />
-              <Route path="reset-password/:token" element={<ResetPassword />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="forgot-password" element={<ForgotPassword />} />
+            <Route path="reset-password/:token" element={<ResetPassword />} />
 
-              <Route path="unauthorized" element={<Unauthorized />} />
-              <Route path="*" element={<Page404 />} />
-            </Routes>
+            <Route path="unauthorized" element={<Unauthorized />} />
+            <Route path="*" element={<Page404 />} />
+          </Routes>
           </ScrollToTop>
         </Router>
     </div>

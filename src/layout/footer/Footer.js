@@ -1,10 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { userSelector } from '../../features/user/userSlice';
 import { IconContext } from 'react-icons';
 import { BsArrowRight, BsArrowUp } from 'react-icons/bs';
 import { HeadingThree, Label, Paragraph } from '../../utils/typography';
 import { StyledFooter, StyledFooterContent, FooterContentInner, FooterContactBlock, FooterActionsBlock, StyledList, StyledListItem, StyledLink, StyledContactList, StyledContactListItem, ContactLink, StyledButton, StyledFooterInfo, StyledContactForm, StyledForm, StyledFormGroup, StyledInput, StyledSubmitButton, StyledFooterInfoInner } from './Footer.styles';
 
 function Footer() {
+  // Redux
+  const {user: userSession} = useSelector(userSelector);
   const scrollToTop = () => {
     window.scrollTo(0,0);
   }
@@ -90,7 +94,15 @@ function Footer() {
               </StyledListItem>
 
               <StyledListItem>
-                <StyledLink to="/login">
+                <StyledLink 
+                  to={
+                    userSession?.token 
+                        ? userSession?.user?.role === 'admin' 
+                            ? "/admin"
+                            : "/student"
+                        : "/login"
+                  } 
+                >
                   <IconContext.Provider value={{color: '#161615', size: '2rem'}}>
                     <BsArrowRight className="footer-link-icon"/>
                   </IconContext.Provider>
