@@ -106,7 +106,7 @@ function Footer() {
                   <IconContext.Provider value={{color: '#161615', size: '2rem'}}>
                     <BsArrowRight className="footer-link-icon"/>
                   </IconContext.Provider>
-                  <Label size="large" color="black">Student</Label>
+                  <Label size="large" color="black">Account</Label>
                 </StyledLink>
               </StyledListItem>
 

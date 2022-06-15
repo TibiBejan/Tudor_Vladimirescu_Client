@@ -22,21 +22,20 @@ function RegisterSection() {
             password: values.password
         }
 
-        const reqConfig = {
-            headers: {
-                'Content-Type': 'application/json',
+        try {
+            const response = await axios.request({
+                method: 'POST', 
+                url: `${process.env.REACT_APP_API_URL}/auth/register`, 
+                data: user,
                 withCredentials: true,
-                credentials: 'include'
-            }
-        } 
-
-        axios.post("auth/register", user, reqConfig).then((response) => {
+            });
             if(response.status === 200 || response.status === 201) {
-                history('/login');
+                history('/login', { replace: true });
             }
-        }).catch(err => {
+        }
+        catch(err) {
             setFormError(err.message);
-        });
+        }
     }
 
     // FORM HANDLER

@@ -59,3 +59,20 @@ export const StyledMessage = styled.label`
     color: #a50000;
     transition: 0.35s ease;
 `;
+
+
+export const SkeletonWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > span {
+        width: 100%;
+        height: 5rem;
+
+        & > span {
+            height: 100%;
+        }
+    }
+`;

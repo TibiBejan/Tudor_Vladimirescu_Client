@@ -132,7 +132,7 @@ export const Paragraph = styled.p`
         }
     }};
     text-align: ${props => props.textAlign ? props.textAlign : 'left'};
-    text-transform: ${props => props.uppercase ? props.uppercase : 'capitalize'};
+    text-transform: ${props => props.uppercase ? props.uppercase : 'normal'};
     line-height: 135%;
 
     ${props => props.theme.breakpoints.medium} {

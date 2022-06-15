@@ -9,16 +9,17 @@ const PrivateRoute = ({ auth, allowedRoles }) => {
     return (
         <>
             {
-                auth.loading && (
-                    <IntroOverlay />
-                )
-            }
-            {
-                !auth.loading && userSession?.token && allowedRoles.includes(userSession?.user?.role)
-                    ? <Outlet />
-                    : userSession?.token && !allowedRoles.includes(userSession?.user?.role)
-                        ? <Navigate to="/unauthorized" state={{ from: location }} replace />
-                        : <Navigate to="/login" state={{ from: location }} replace />
+                auth.loading 
+                    ? (
+                        <IntroOverlay />
+                    )
+                    : (
+                        userSession?.token && allowedRoles.includes(userSession?.user?.role)
+                        ? <Outlet />
+                        : userSession?.token
+                            ? <Navigate to="/unauthorized" state={{ from: location }} replace />
+                            : <Navigate to="/login" state={{ from: location }} replace />
+                    )
             }
         </>
     )
