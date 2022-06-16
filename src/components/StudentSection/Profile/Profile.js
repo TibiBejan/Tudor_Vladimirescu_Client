@@ -4,8 +4,10 @@ import { studentInformationSchema } from '../../../validation/StudentSchema';
 import axios from 'axios';
 import CustomInput from '../../CustomInput/CustomInput';
 import Button from '../../../layout/button/Button';
-import { HeadingThree, Paragraph } from '../../../utils/typography';
-import { StyledProfile, StyledProfileHeading, StyledProfileForm, StyledFormWrapper, StyledMessageWrapper, StyledMessage, StyledForm, StyledButtonGroup, SkeletonWrapper  } from './Profile.style';
+import { HeadingFour, HeadingThree, Label, Paragraph } from '../../../utils/typography';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import { StyledProfile, StyledProfileHeading, StyledProfileForm, StyledFormWrapper, StyledMessageWrapper, StyledMessage, StyledForm, StyledButtonGroup, FormHeader, StyledFormGroup, SkeletonWrapper, StyledInputWrapper, StyledSelect } from './Profile.style';
 
 function Profile() {
     // State
@@ -46,6 +48,7 @@ function Profile() {
             if(response.status === 200 || response.status === 201) {
                 setStudentProfileData(response.data.data);
                 setStudentProfileError(null);
+                setFormError(null);
             }
         }
         catch(error) {
@@ -104,13 +107,56 @@ function Profile() {
                         <StyledMessage>{formError || studentProfileError}</StyledMessage>
                     </StyledMessageWrapper>
                 ) : null }    
+                {
+                    Object.keys(studentProfileData).length !== 0 && (
+                        <StyledMessageWrapper background>
+                            <StyledMessage>Your data is updated</StyledMessage>
+                        </StyledMessageWrapper>
+                    )
+                }
             </StyledProfileHeading>
             <StyledProfileForm>
                 <StyledFormWrapper>
                     <StyledForm method="POST" onSubmit={formik.handleSubmit}>
+                        <FormHeader>
+                            <HeadingFour dark>{
+                                Object.keys(studentProfileData).length !== 0 
+                                    ? "Update your profile information"
+                                    : "Declare your profile information"
+                            }</HeadingFour>
+                        </FormHeader>
                         <CustomInput type="text" loading={studentProfileLoading} id="username" name="username" value={formik.values.username} onChange={formik.handleChange} error={formik.errors.username} placeholder="Your username"/>
                         <CustomInput type="date" loading={studentProfileLoading} id="dob" name="dob" value={formik.values.dob} onChange={formik.handleChange} error={formik.errors.dob} placeholder="Your date of birth"/>
-                        <CustomInput type="text" loading={studentProfileLoading} id="gender" name="gender" value={formik.values.gender} onChange={formik.handleChange} error={formik.errors.gender} placeholder="Your gender"/>
+                        <StyledFormGroup>
+                            <Label color="black" htmlFor="gender">Your gender</Label>
+                            {
+                                studentProfileLoading
+                                    ? (
+                                        <SkeletonWrapper>
+                                            <Skeleton baseColor='rgba(124,111,99,.3)'/>
+                                        </SkeletonWrapper>
+                                    )
+                                    : (
+                                        <StyledInputWrapper>
+                                            <StyledSelect
+                                                id="gender"
+                                                name="gender"
+                                                value={formik.values.gender}
+                                                onChange={formik.handleChange}
+                                            >
+                                                <option value="" label="Choosy your gender" />
+                                                <option value="Female" label="Female" />
+                                                <option value="Male" label="Male" />
+                                            </StyledSelect>
+                                        </StyledInputWrapper>
+                                    )
+                            }
+                            {formik.errors.gender  && 
+                                <StyledMessageWrapper>
+                                    <StyledMessage>{formik.errors.gender}</StyledMessage>
+                                </StyledMessageWrapper>
+                            }  
+                        </StyledFormGroup>
                         <CustomInput type="text" loading={studentProfileLoading} id="nationality" name="nationality" value={formik.values.nationality} onChange={formik.handleChange} error={formik.errors.nationality} placeholder="Your nationality"/>
                         <CustomInput type="text" loading={studentProfileLoading} id="phone_number" name="phone_number" value={formik.values.phone_number} onChange={formik.handleChange} error={formik.errors.phone_number} placeholder="Your phone number"/>
                         <CustomInput type="text" loading={studentProfileLoading} id="street_adress" name="street_adress" value={formik.values.street_adress} onChange={formik.handleChange} error={formik.errors.street_adress} placeholder="Your street adress"/>

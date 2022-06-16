@@ -1,4 +1,5 @@
 import React from 'react';
+import Enrollment from '../Enrollment/Enrollment';
 import Profile from '../Profile/Profile';
 import Relatives from '../Relatives/Relatives';
 import { StyledContentWrapper } from './ContentWrapper.style';
@@ -15,7 +16,7 @@ function ContentWrapper({activeSection, setActiveSection}) {
                 case 'relatives':
                     return <Relatives />
                 case 'enrollment':
-                    return <p>Enrollment</p>     
+                    return <Enrollment />
                 default: 
                     return <p>Profile</p>
             }

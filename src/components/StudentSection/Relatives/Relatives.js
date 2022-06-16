@@ -2,13 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import { createRelativesSchema } from '../../../validation/RelativesSchema';
 import axios from 'axios';
+import { IconContext } from 'react-icons';
+import { FaUserAlt } from 'react-icons/fa';
 import CustomInput from '../../CustomInput/CustomInput';
 import Button from '../../../layout/button/Button';
-import { HeadingThree, Paragraph } from '../../../utils/typography';
-import { StyledRelatives, StyledRelativesHeading, StyledRelativesList, StyledList, StyledListWrapper, StyledRelativeItem,  StyledRelativesForm, StyledFormWrapper, StyledMessageWrapper, StyledMessage, StyledForm, StyledButtonGroup, SkeletonWrapper  } from './Relatives.style';
+import Modal from './Modal/Modal';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import { HeadingFour, HeadingThree, Label, Paragraph } from '../../../utils/typography';
+import { StyledRelatives, StyledRelativesHeading, StyledRelativesList, StyledList, StyledRelativesItemSkeleton, StyledListWrapper, StyledRelativeItem,  StyledRelativesForm, StyledFormWrapper, StyledMessageWrapper, StyledMessage, StyledForm, FormHeader, StyledRelativesGroup, StyledPreviewImage, ActionsGroup, StyledButton  } from './Relatives.style';
 
 function Relatives() {
     // State
+    const [ modalToggled, setModalToggled ] = useState(false);
+    const [ selectedRelativeId, setSelectedRelativeId ] = useState(null);
     const [ relativesData, setRelativesData ] = useState([]);
     const [ relativesError, setRelativesError ] = useState(null);
     const [ relativesLoading, setRelativesLoading ] = useState(true);
@@ -32,7 +39,7 @@ function Relatives() {
                 setRelativesLoading(false);
             }
         })();
-    }, []);
+    }, [modalToggled]);
     // Functions
     const onSubmit = async (values, { resetForm }) => {
         try {
@@ -46,10 +53,12 @@ function Relatives() {
             if(response.status === 200 || response.status === 201) {
                 setRelativesData(response.data.data);
                 setRelativesError(null);
+                setFormError(null);
                 resetForm();
             }
         }
         catch(error) {
+            console.log(error);
             setFormError(error.response.data.message);
         } finally {
             setRelativesLoading(false);
@@ -64,7 +73,8 @@ function Relatives() {
                 withCredentials: true,
             });
             if(response.status === 204) {
-                setRelativesData({});
+                const filteredResponse = relativesData.filter(el => el.id !== id)
+                setRelativesData(filteredResponse);
                 setRelativesError(null);
             }
         }
@@ -104,17 +114,43 @@ function Relatives() {
                 <StyledListWrapper>
                     <StyledList>
                         {
-                            relativesData.length === 0 && (
-                                <StyledRelativesHeading>
+                            relativesLoading && [...Array(2).keys()].map((_, index) => (
+                                <StyledRelativesItemSkeleton key={index}>
+                                    <Skeleton baseColor='rgba(124,111,99,.3)'/>
+                                </StyledRelativesItemSkeleton>
+                            ))
+                        }
+                        {
+                            !relativesLoading && relativesData.length === 0 && (
+                                <>
                                     <HeadingThree dark>No relatives created at the moment</HeadingThree>
                                     <Paragraph size="large" color="black">Fill in the form below to create one</Paragraph>
-                                </ StyledRelativesHeading>
+                                </>
                             ) 
                         }
                         {
-                            relativesData.length !== 0 && relativesData.map(el => (
+                            !relativesLoading && relativesData.length !== 0 && relativesData.map(el => (
                                 <StyledRelativeItem key={el.id}>
-                                    {el.first_name}
+                                    <StyledRelativesGroup>
+                                        <StyledPreviewImage>
+                                            <IconContext.Provider value={{size: "2rem", color: "black"}}>
+                                                <FaUserAlt />
+                                            </IconContext.Provider>
+                                        </StyledPreviewImage>
+                                        <Label size="medium" color="black" fontWeight="bold">{el.first_name} {el.last_name}</Label>
+                                        <Label size="medium" color="black" fontWeight="bold">{el.relation}</Label>
+                                    </StyledRelativesGroup>
+                                    <ActionsGroup>
+                                        <StyledButton
+                                            onClick={() => {
+                                                setSelectedRelativeId(el.id)
+                                                setModalToggled(true);
+                                            }}
+                                        >Preview</StyledButton>
+                                        <StyledButton 
+                                            onClick={() => deleteProfile(el.id)}
+                                        >Delete</StyledButton>
+                                    </ActionsGroup>
                                 </StyledRelativeItem>
                             ))
                         }
@@ -124,6 +160,9 @@ function Relatives() {
             <StyledRelativesForm>
                 <StyledFormWrapper>
                     <StyledForm method="POST" onSubmit={formik.handleSubmit}>
+                        <FormHeader>
+                            <HeadingFour dark>Add relatives</HeadingFour>
+                        </FormHeader>
                         <CustomInput type="text" loading={relativesLoading} id="first_name" name="first_name" value={formik.values.first_name} onChange={formik.handleChange} error={formik.errors.first_name} placeholder="Your first name"/>
                         <CustomInput type="text" loading={relativesLoading} id="last_name" name="last_name" value={formik.values.last_name} onChange={formik.handleChange} error={formik.errors.last_name} placeholder="Your last name"/>
                         <CustomInput type="email" loading={relativesLoading} id="email" name="email" value={formik.values.email} onChange={formik.handleChange} error={formik.errors.email} placeholder="Your email"/>
@@ -134,6 +173,9 @@ function Relatives() {
                     </StyledForm> 
                 </StyledFormWrapper>
             </StyledRelativesForm>
+            {
+                modalToggled && <Modal closeModal={() => setModalToggled(false)} selectedRelative={relativesData.length !== 0 && relativesData.filter(el => el.id === selectedRelativeId)[0]}/>
+            }
         </StyledRelatives>
     )
 }

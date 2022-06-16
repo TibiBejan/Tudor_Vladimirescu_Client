@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
+import { HeadingFour, Label } from '../../../utils/typography';
 
 export const StyledRelatives = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr minmax(40vh, max-content);
+    grid-template-rows: minmax(10vh, max-content) minmax(20vh, max-content) minmax(40vh, max-content);
     gap: 2.5rem;
 `;
 
@@ -43,7 +44,6 @@ export const StyledList = styled.ul`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -52,10 +52,83 @@ export const StyledList = styled.ul`
     gap: 2.5rem;
 `;
 
+export const StyledRelativesItemSkeleton = styled.div`
+    width: 100%;
+    display: flex;
+
+    & > span {
+        width: 100%;
+        height: 10rem;
+
+        & > span {
+            width: 100%;
+            height: 100%;
+        }
+    }
+`;
+
 export const StyledRelativeItem = styled.div`
     width: 100%;
-    padding: 1.5rem; ${props => props.theme.padding.large};
-    background-color: red;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem ${props => props.theme.padding.small};
+
+    &:nth-child(even) {
+        background-color: ${props => props.theme.colors.white};
+    }
+
+    &:nth-child(odd) {
+        background-color: ${props => props.theme.colors.secondaryBrown};
+    }
+`;
+
+export const StyledRelativesGroup = styled.div`
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+
+    ${Label} {
+        text-decoration: underline;
+    }
+`;
+
+export const StyledPreviewImage = styled.div`
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: ${props => props.theme.colors.primaryYellow};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const ActionsGroup = styled.div`
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+`;
+
+export const StyledButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem ${props => props.theme.padding.small};
+    background-color: ${props => props.theme.colors.black};
+    color: ${props => props.theme.colors.white};
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.35s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
 `;
 
 export const StyledRelativesForm = styled.div`
@@ -122,4 +195,15 @@ export const StyledButtonGroup = styled.div`
     align-items: center;
     justify-content: center;
     gap: 5rem;
+`;
+
+export const FormHeader = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    ${HeadingFour} {
+        text-decoration: underline;
+    }
 `;
