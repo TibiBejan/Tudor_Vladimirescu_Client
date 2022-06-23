@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { NavbarWrapper, NavbarWrapperInner, NavbarLogo, StyledLink, NavbarActions, NavbarAction, BeforePseudo, AfterPseudo, ActionLink, Label } from './Navbar.styles';
-import { useSelector } from 'react-redux';
-import { userSelector } from '../../features/user/userSlice';
+import axios from 'axios';
+import { NavbarWrapper, NavbarWrapperInner, NavbarLogo, StyledLink, NavbarActions, NavbarAction, BeforePseudo, AfterPseudo, ActionLink, StyledAction, Label } from './Navbar.styles';
+// Redux
+import { useDispatch, useSelector } from 'react-redux';
+import { userSelector, requestLogout, receiveLogoutError } from '../../features/user/userSlice';
 
 function Navbar() {
+    // History router
+    const history = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     // Redux
+    const dispatch = useDispatch();
     const {user: userSession} = useSelector(userSelector);
     // State
     const [ scrollPos, setScrollPos ] = useState(0);
@@ -19,6 +27,26 @@ function Navbar() {
             window.removeEventListener('scroll', watchScrollPos);
         }
     }, []);
+    // Functions
+    const logout = async () => {
+        try {
+            // INIT REQ
+            dispatch(requestLogout);
+            const response = await axios.request({
+              method: 'GET', 
+              url: `${process.env.REACT_APP_API_URL}/auth/logout`,
+              withCredentials: true,
+            });
+            if(response.status === 200 || response.status === 201) {
+                history(from, { replace: true });
+                window.location.reload(true);
+            } else {
+              dispatch(receiveLogoutError('There is an error with current session, please reload'));
+            }
+          } catch (error) {
+            dispatch(receiveLogoutError(error.message));
+          }
+    }
 
     return (
         <NavbarWrapper sticky={scrollPos > 0}>
@@ -118,17 +146,38 @@ function Navbar() {
                             align="end"
                         >
                             <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>03</Label>
-                            Account
+                            {
+                                userSession?.token 
+                                    ? userSession?.user?.role === 'admin' 
+                                        ? "Admin"
+                                        : "Student"
+                                    : "Account"
+                            } 
                         </ActionLink>
                     </NavbarAction>
-                    <NavbarAction>
-                        <BeforePseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
-                        <ActionLink to="/contact-us" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="end">
-                            <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>04</Label>
-                            Contact
-                        </ActionLink>
-                        <AfterPseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
-                    </NavbarAction>
+                    {
+                        userSession?.token 
+                            ? (
+                                <NavbarAction>
+                                    <BeforePseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
+                                        <StyledAction onClick={() => logout()} invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="end">
+                                            <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>04</Label>
+                                            Logout
+                                        </StyledAction>
+                                    <AfterPseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
+                                </NavbarAction>
+                            )
+                            : (
+                                <NavbarAction>
+                                    <BeforePseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
+                                    <ActionLink to="/contact-us" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="end">
+                                        <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>04</Label>
+                                        Contact
+                                    </ActionLink>
+                                    <AfterPseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
+                                </NavbarAction>
+                            )
+                    }
                 </NavbarActions>
             </NavbarWrapperInner>
         </NavbarWrapper>

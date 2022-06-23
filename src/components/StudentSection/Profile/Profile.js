@@ -96,7 +96,6 @@ function Profile() {
         validationSchema: studentInformationSchema
     });
 
-
     return (
         <StyledProfile>
             <StyledProfileHeading>

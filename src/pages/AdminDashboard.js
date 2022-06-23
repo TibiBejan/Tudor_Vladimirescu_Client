@@ -10,6 +10,7 @@ import Footer from '../layout/footer/Footer';
 import AdminLayoutData from '../data/Auth.json';
 // Hooks
 import useLoading from '../hooks/useLoading';
+import AdminSection from '../components/AdminSection/AdminSection';
 
 function AdminDashboard() {
   // Hooks
@@ -26,7 +27,7 @@ function AdminDashboard() {
             <Header>
               <HeroShowcase image={AdminLayoutData.adminDashboard.hero.image} imageAlt={AdminLayoutData.adminDashboard.hero.imageAlt} title={`${AdminLayoutData.studentDashboard.hero.title}, ${userSession?.user?.first_name}`} />
             </Header>
-
+            <AdminSection />
             <Footer />
           </>
         )

@@ -6,8 +6,8 @@ import { StyledSlide, StyledSlideInner, StyledContactImage, StyledLink } from '.
 
 function SlideContact({data}) {
     // Vars
-    const nameWords = data.name.split(' ').length;
-    const memberName = data.name.split(' ').map((el, index) => {
+    const nameWords = data.name && data?.name.split(' ').length;
+    const memberName = data.name && data?.name.split(' ').map((el, index) => {
         if(index === nameWords - 1) {
             return el.toUpperCase();
         }
@@ -25,7 +25,7 @@ function SlideContact({data}) {
                         <Label color="primaryYellow">{data.position}</Label>
                     )
                 }
-                <HeadingThree>{data.name}</HeadingThree>
+                <HeadingThree>{data.name || `${data.first_name} ${data.last_name}`}</HeadingThree>
                 <StyledLink 
                     to='#'
                     onClick={(e) => {

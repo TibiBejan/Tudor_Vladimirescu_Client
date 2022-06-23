@@ -104,6 +104,48 @@ export const ActionLink = styled(NavLink)`
     }
 `;
 
+export const StyledAction = styled.button`
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-content: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: ${props => props.align ? props.align : 'start'};
+    text-transform: uppercase;
+    color: ${props => props.invertcolor ? props.theme.colors.black : props.theme.colors.white};
+    transition: all 0.35s ease-in-out;
+
+    & .selected {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.5rem;
+        background-color: ${props => props.theme.colors.primaryYellow};
+        opacity: 0;
+        transition: all 0.35s ease-in-out;
+    }
+
+    &:hover {
+        color: ${props => props.theme.colors.primaryYellow};
+
+        &::after {
+            opacity: 1;
+        }
+    } 
+`;
+
 export const NavbarAction = styled.li`
     position: relative;
     display: flex;

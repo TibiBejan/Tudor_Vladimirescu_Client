@@ -6,19 +6,38 @@ import { StyledMenu, StyledMenuActions, StyledMenuAction, StyledMenuLogo, Styled
 const MENU_LINKS = [
     {
         "id": 1,
-        "label": "Allocation"
+        "label": "Allocation",
+        "state_label": "allocation"
     },
     {
         "id": 2,
-        "label": "Profile"
+        "label": "1 - Profile",
+        "state_label": "profile"
     },
     {
         "id": 3,
-        "label": "Relatives"
+        "label": "2 - Relatives",
+        "state_label": "relatives"
     },
     {
         "id": 4,
-        "label": "Enrollment"
+        "label": "3 - Enrollment",
+        "state_label": "enrollment"
+    },
+    {
+        "id": 5,
+        "label": "4 - Accommodate",
+        "state_label": "accommodate"
+    },
+    {
+        "id": 6,
+        "label": "Update Account",
+        "state_label": "update-account"
+    },
+    {
+        "id": 7,
+        "label": "Update Password",
+        "state_label": "update-password"
     }
 ];
 
@@ -30,8 +49,8 @@ function Menu({ activeAction, setActiveAction }) {
                 MENU_LINKS.map(l => (
                     <StyledMenuAction 
                         key={l.id}
-                        active={activeAction === l.label.toLowerCase()}
-                        onClick={() => setActiveAction(l.label.toLowerCase())}
+                        active={activeAction === l.state_label.toLowerCase()}
+                        onClick={() => setActiveAction(l.state_label)}
                     >
                         <Label color="black" weight="bold" uppercase>{l.label}</Label>
                     </StyledMenuAction>

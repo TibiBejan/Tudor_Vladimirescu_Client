@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ContentWrapper from './ContentWrapper/ContentWrapper';
 import Menu from './Menu/Menu';
-import { StyledSection, StyledSectionInner } from './StudentSection.style';
+import { StyledSection, StyledSectionInner, SectionContent } from './AdminSection.style';
 
-function StudentSection() {
+function AdminSection() {
     // State
     const [ activeSection, setActiveSection ] = useState('profile');
-    // Effect
 
     return (
         <StyledSection>
@@ -18,4 +17,4 @@ function StudentSection() {
     )
 }
 
-export default StudentSection;
+export default AdminSection

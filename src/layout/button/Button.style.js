@@ -64,6 +64,12 @@ export const StyledButton = styled.button`
             }
         }
     }
+
+    &:disabled {
+        opacity: 0.75;
+        pointer-events: none;
+        user-select: none;
+    }
 `;
 
 export const ActionLink = styled(Link)`
