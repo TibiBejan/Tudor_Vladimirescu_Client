@@ -53,7 +53,7 @@ function StudentProfileUpdate({studentData}) {
         <StyledAccountUpdate>
             <StyledAccountUpdateHeading>
                 <HeadingThree dark>Student profile</HeadingThree>
-                <Paragraph size="large" color="black">From this panel, you can update your account informations</Paragraph>
+                <Paragraph size="large" color="black">From this panel, you can update student informations</Paragraph>
                 {formError || studentProfileUpdatedError ? (
                     <StyledMessageWrapper background>
                         <StyledMessage>{formError || studentProfileUpdatedError}</StyledMessage>
