@@ -16,11 +16,21 @@ const MENU_LINKS = [
     },
     {
         "id": 3,
+        "label": "Residence Halls",
+        "state_label": "halls"
+    },
+    {
+        "id": 4,
+        "label": "Universities",
+        "state_label": "universities"
+    },
+    {
+        "id": 5,
         "label": "Update Account",
         "state_label": "update-account"
     },
     {
-        "id": 4,
+        "id": 6,
         "label": "Update Password",
         "state_label": "update-password"
     }

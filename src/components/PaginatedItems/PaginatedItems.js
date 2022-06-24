@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
+import StudentsPagination from '../AdminSection/StudentsPagination/StudentsPagination';
+import { PaginationWrapper, StyledReactPaginate } from './PaginateItems.style';
 
-function PaginatedItems({ items, itemsPerPage  }) {
+function PaginatedItems({ items, itemsPerPage, deleteStudent, togglePreviewModal, toggleEditModal }) {
     // Pagination State
-    const [currentItems, setCurrentItems] = useState(null);
+    const [currentItems, setCurrentItems] = useState(items);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     // Effect
@@ -20,22 +22,24 @@ function PaginatedItems({ items, itemsPerPage  }) {
     };
 
     return (
-        <>
-            {
-                // currentItems.map(el => {
-                //     <div>{el.first_name}</div>
-                // })
-            }
-            <ReactPaginate
+        <PaginationWrapper>
+            <StudentsPagination 
+                currentItems={currentItems} 
+                deleteStudent={deleteStudent}
+                togglePreviewModal={togglePreviewModal}  
+                toggleEditModal={toggleEditModal}  
+            />
+            <StyledReactPaginate
                 breakLabel="..."
-                nextLabel="next >"
+                nextLabel={"Next"}
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={5}
                 pageCount={pageCount}
-                previousLabel="< previous"
+                previousLabel={"Previous"}
                 renderOnZeroPageCount={null}
+                containerClassName="pagination"
             />
-        </>
+        </PaginationWrapper>
     )
 }
 

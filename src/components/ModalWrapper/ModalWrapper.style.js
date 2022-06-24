@@ -53,8 +53,8 @@ export const StyledRow = styled.div`
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 ${props => props.theme.padding.large};
-    padding-top: ${props => props.theme.padding.large};
+    padding: ${props => props.theme.padding.small} ${props => props.theme.padding.large};
+    border-bottom: 0.1rem solid ${props => props.theme.colors.primaryBrown};
 `;
 
 export const StyledButton = styled.button`

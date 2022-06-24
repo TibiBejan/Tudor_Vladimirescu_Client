@@ -5,7 +5,7 @@ import { StyledSection, StyledSectionInner, SectionContent } from './AdminSectio
 
 function AdminSection() {
     // State
-    const [ activeSection, setActiveSection ] = useState('profile');
+    const [ activeSection, setActiveSection ] = useState('students');
 
     return (
         <StyledSection>

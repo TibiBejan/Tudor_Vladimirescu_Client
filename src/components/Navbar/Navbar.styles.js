@@ -114,7 +114,7 @@ export const StyledAction = styled.button`
     padding: 1.5rem;
     font-size: 1.4rem;
     font-weight: 400;
-    text-align: ${props => props.align ? props.align : 'start'};
+    text-align: ${props => props.align ? props.align : 'start'} !important;
     text-transform: uppercase;
     color: ${props => props.invertcolor ? props.theme.colors.black : props.theme.colors.white};
     transition: all 0.35s ease-in-out;

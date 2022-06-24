@@ -160,17 +160,17 @@ function Navbar() {
                             ? (
                                 <NavbarAction>
                                     <BeforePseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
-                                        <StyledAction onClick={() => logout()} invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="end">
-                                            <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>04</Label>
-                                            Logout
-                                        </StyledAction>
+                                    <StyledAction onClick={() => logout()} invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="start">
+                                        <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>04</Label>
+                                        Logout
+                                    </StyledAction>
                                     <AfterPseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
                                 </NavbarAction>
                             )
                             : (
                                 <NavbarAction>
                                     <BeforePseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
-                                    <ActionLink to="/contact-us" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="end">
+                                    <ActionLink to="/contact-us" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="start">
                                         <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>04</Label>
                                         Contact
                                     </ActionLink>

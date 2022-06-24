@@ -6,6 +6,8 @@ import { HeadingThree, Label, Paragraph } from '../../../utils/typography';
 import PaginatedItems from '../../PaginatedItems/PaginatedItems';
 import CustomInput from '../../CustomInput/CustomInput';
 import Button from '../../../layout/button/Button';
+import PreviewModal from './PreviewModal/PreviewModal';
+import EditModal from './EditModal/EditModal';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { StyledStudents, StyledStudentsHeading, StyledForm, StyledFormGroup, SkeletonWrapper, StyledInputWrapper, StyledSelect, StyledMessageWrapper, StyledMessage, StyledStudentsContent } from './Students.style';
@@ -16,6 +18,14 @@ function Students() {
   const [ studentsDataError, setStudentsDataError ] = useState(null);
   const [ studentsDataLoading, setStudentsDataLoading ] = useState(true);
   const [ formError, setFormError ] = useState('');
+  const [ previewModal, setPreviewModal ] = useState({
+    opened: false,
+    data: null
+  });
+  const [ editModal, setEditModal ] = useState({
+    opened: false,
+    data: null
+  });
   // Effect 
   useEffect(() => {
     (async () => {
@@ -47,7 +57,7 @@ function Students() {
       } else if (values.searchQuerry && (!values.university || values.university === '')) {
           reqUrl = `${process.env.REACT_APP_API_URL}/admin/users-query?searchQuerry=${values.searchQuerry}`;
       } else if((!values.university || values.university === '') && (!values.searchQuerry || values.searchQuerry === '')) {
-          reqUrl = '${process.env.REACT_APP_API_URL}/admin/users'
+          reqUrl = `${process.env.REACT_APP_API_URL}/admin/users`
       }
 
       setStudentsDataLoading(true);
@@ -69,25 +79,39 @@ function Students() {
     }
   }    
   
-  // const deleteStudent = async (id) => {
-  //   try {
-  //       setEnrollmentLoading(true);
-  //       const response = await axios.request({
-  //           method: 'DELETE', 
-  //           url: Object.keys(enrollmenteData).length !== 0 &&  `${process.env.REACT_APP_API_URL}/user/enrollment/${enrollmenteData.id}`, 
-  //           withCredentials: true,
-  //       });
-  //       if(response.status === 204) {
-  //           setEnrollmentData({});
-  //           setEnrollmentError(null);
-  //       }
-  //   }
-  //   catch(error) {
-  //       setFormError(error.response.data.message);
-  //   } finally {
-  //       setEnrollmentLoading(false);
-  //   }
-  // }
+  const deleteStudent = async (email) => {
+    try {
+        setStudentsDataLoading(true);
+        const response = await axios.request({
+            method: 'DELETE', 
+            url: Object.keys(studentsData).length !== 0 &&  `${process.env.REACT_APP_API_URL}/admin/users/${email}`, 
+            withCredentials: true,
+        });
+        if(response.status === 204) {
+          setStudentsData(prevState => prevState.filter(el => el.email !== email));
+          setStudentsDataError(null);
+        }
+    }
+    catch(error) {
+        setFormError(error.response.data.message);
+    } finally {
+      setStudentsDataLoading(false);
+    }
+  }
+
+  const closePreviewModal = () => {
+    return setPreviewModal({
+      opened: false,
+      data: null
+    });
+  }
+
+  const closeEditModal = () => {
+    return setEditModal({
+      opened: false,
+      data: null
+    });
+  }
 
   // FORM HANDLER
   const formik = useFormik({
@@ -99,8 +123,6 @@ function Students() {
       onSubmit,
       validationSchema: adminSearchSchema
   });
-
-  console.log(studentsData, studentsDataError);
 
   return (
     <StyledStudents>
@@ -165,10 +187,26 @@ function Students() {
               </SkeletonWrapper>
             )
             : (
-              <p>data</p>
+              <PaginatedItems 
+                items={studentsData} 
+                itemsPerPage={5} 
+                deleteStudent={deleteStudent} 
+                togglePreviewModal={setPreviewModal}
+                toggleEditModal={setEditModal}  
+              />
             ) 
         }
       </StyledStudentsContent>
+      {
+        previewModal.opened && previewModal.data && (
+          <PreviewModal closeModal={closePreviewModal} studentData={previewModal.data}/>
+        )
+      }
+      {
+        editModal.opened && editModal.data && (
+          <EditModal closeModal={closeEditModal} studentData={editModal.data}/>
+        )
+      }
     </StyledStudents>
   )
 }
