@@ -120,14 +120,14 @@ function Navbar() {
                     } */}
                     <NavbarAction>
                         <BeforePseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
-                        <ActionLink to="/halls" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="end">
+                        <ActionLink to="/halls" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="start">
                             <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>01</Label>
                             Halls
                         </ActionLink>
                     </NavbarAction>
                     <NavbarAction>
                         <BeforePseudo invertcolor={scrollPos > 0 ? "scrolled" : undefined} />
-                        <ActionLink to="/accommodation" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="end">
+                        <ActionLink to="/accommodation" invertcolor={scrollPos > 0 ? "scrolled" : undefined} align="start">
                             <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>02</Label>
                             Accommodation
                         </ActionLink>
@@ -143,7 +143,7 @@ function Navbar() {
                                     : "/login"
                             } 
                             invertcolor={scrollPos > 0 ? "scrolled" : undefined} 
-                            align="end"
+                            align="start"
                         >
                             <Label invertcolor={scrollPos > 0 ? "scrolled" : undefined}>03</Label>
                             {
